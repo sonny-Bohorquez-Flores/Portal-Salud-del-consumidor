@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GESTIONAR DOCTORES</title>
+    <link rel="stylesheet" href="/public/citas.css">
+    <script src="/models/doctores.js"></script>
+</head>
+
+<body>
+    <div class="intranet-container">
+        <header>
+            <div class="hospital-info">
+                <img src="/Img/hospital.png" alt="logo Hospital">
+                <div class="hospital-text">
+                    <h1 class="Titulo2">Hospital Gosling</h1>
+                    <h1 class="Titulo3">ciudad y esperanza</h1>
+                </div>
+            </div>
+            <button class="menu-button">Cerrar Sesión</button>
+        </header>
+        <main>
+            <div class="blanco"><p>w</p></div>
+            <div class="titulo-container">
+                <h2 class="titulo">GESTIÓN DE DOCTORES</h2>
+            </div>
+            <!-- Subtítulo y texto -->
+            <div class="subtitulo-container">
+                <h3 class="subtitulo">LISTA DE DOCTORES</h3>
+                <p class="descripcion">A continuación, la lista de doctores registrados.</p>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>NOMBRE</th>
+                        <th>CORREO</th>
+                        <th>ESPECIALIDAD</th>
+                        <th>NÚMERO DE TELÉFONO</th>
+                        <th>DETALLE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Ejemplo de fila con botón "Detalles" -->
+                    <tr>
+                        <td>Dr. Juan Pérez</td>
+                        <td>juan.perez@example.com</td>
+                        <td>Cardiología</td>
+                        <td>958 456 790</td>
+                        <td>
+                            <button class="detalles-button">Detalles</button>
+                        </td>
+                    </tr>
+                    <!-- Puedes agregar más filas según tus necesidades -->
+                </tbody>
+            </table>
+            <div class="blanco2"><p>w</p></div>
+        </main>
+        <footer>
+            Copyright © Hospital Gosling
+        </footer>
+    </div>
+</body>
+
+</html>

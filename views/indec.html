@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/models/main.js"></script>
+    <link rel="stylesheet" href="/public/style.css">
+    <title>Tu Página</title>
+    <!-- Agrega el enlace a Bootstrap (CDN) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<body onload="mostrarDoctoresDisponibles(); mostrarHorariosDisponibles();">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">
+            <img src="/Img/hospital.png" alt="Logo" style="width:50px;"> <!-- Reemplaza la ruta con la ubicación de tu logo -->
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contactanos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Citas</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido centrado -->
+    <div class="container mt-4">
+        <div class="row justify-content-center" id="formularioPrimero">
+            <div class="col-md-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                <label for="especialista">Especialista:</label>
+                                <select class="form-control" id="especialista" onchange="mostrarDoctoresDisponibles()">
+                                    <option value="especialista1">Medicina Interna</option>
+                                    <option value="especialista2">Pediatría</option>
+                                    <option value="especialista3">Cirugía General</option>
+                                    <option value="especialista4">Ginecología y Obstetricia</option>
+                                    <option value="especialista5">Cardiología</option>
+                                    <option value="especialista6">Neurología</option>
+                                    <option value="especialista7">Oftalmología</option>
+                                    <option value="especialista8">Otorrinolaringología</option>
+                                    <option value="especialista9">Dermatología</option>
+                                    <option value="especialista10">Psiquiatría</option>
+                                    <!-- Agrega más opciones según sea necesario -->
+                                </select>
+                            </th>
+                            <th>
+                                <label class="mt-3" for="doctor">Doctor en Turno:</label>
+                                <select class="form-control" id="doctor" onchange="mostrarHorariosDisponibles()">
+                                    <option value="doctor A">Dra. Isabel Montenegro</option>
+                                    <option value="doctor B">Dr. Alejandro Rodríguez</option>
+                                    <option value="doctor1">Dra. Gabriela Sánchez</option>
+                                    <option value="doctor2">Dr. Martín Herrera</option>
+                                    <option value="doctor1">Dra. Carolina Mendoza</option>
+                                    <option value="doctor2">Dr. Sebastián Vargas</option>
+                                    <option value="doctor1">Dra. Valeria Torres</option>
+                                    <option value="doctor2">Dra. Andrada Ramírez</option>
+                                    <!-- Agrega más opciones según sea necesario -->
+                                </select>
+                            </th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+
+            <!-- Div para Horario (debajo de Especialista) -->
+            <div class="col-md-12">
+                <div class="p-3 table-container">
+                    <label for="horario">Horario Disponible:</label>
+                    <select id="horario" class="form-control">
+                        <option value="">Seleccionar Horario</option>
+                        <!-- Aquí se generan dinámicamente las opciones de horarios disponibles -->
+                    </select>
+                    <div class="text-center">
+                        <button class="btn btn-primary mt-3" onclick="mostrarSiguienteFormulario()">Siguiente</button>
+                    </div>
+                </div>
+            </div>
+            
+            
+
+        </div>
+
+        <!-- Div derecho (segundo formulario) -->
+        <div class="container mt-4" id="formularioSiguiente" style="display: none;">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="p-3">
+                        <h4>Segundo Formulario</h4>
+                        <form>
+                             <div class="row">
+                        <div class="col-md-6">
+                            <!-- Columna 1 -->
+                            <label for="tipoDocumento">Tipo de Documento:</label>
+                            <select id="tipoDocumento" name="tipoDocumento">
+                                <option value="dni">DNI</option>
+                                <option value="pasaporte">Pasaporte</option>
+                                <!-- Agrega más opciones según sea necesario -->
+                            </select>
+
+                            <label for="numeroDocumento">Número de Documento:</label>
+                            <input type="text" id="numeroDocumento" name="numeroDocumento" oninput="validarNumeroDocumento(this)">
+                            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                            <input type="date" id="fechaNacimiento" name="fechaNacimiento">
+                        </div>
+                        <div class="col-md-6">
+                            <!-- Columna 2 -->
+                            <label for="apellidoPaterno">Apellido Paterno:</label>
+                            <input type="text" id="apellidoPaterno" name="apellidoPaterno">
+
+                            <label for="apellidoMaterno">Apellido Materno:</label>
+                            <input type="text" id="apellidoMaterno" name="apellidoMaterno">
+
+                            <label for="nombreCompleto">Nombre Completo:</label>
+                            <input type="text" id="nombreCompleto" name="nombreCompleto">
+                        </div>
+                    </div>
+
+                    <!-- Resto de campos del formulario -->
+                    <label for="sexo">Sexo:</label>
+                    <select id="sexo" name="sexo">
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <!-- Agrega más opciones según sea necesario -->
+                    </select>
+
+                    <label for="correoElectronico">Correo Electrónico:</label>
+                    <input type="email" id="correoElectronico" name="correoElectronico">
+
+                    
+
+                    <!-- Muestra la información del especialista y doctor seleccionados -->
+                    <p>Especialista <span id="especialistaSeleccionado"></span></p>
+                    <p>Doctor en Turno <span id="doctorSeleccionado"></span></p>
+                    <p>Horario <span id="horarioSeleccionado"></span></p>
+                    <button type="submit">Enviar</button>
+
+                    <!-- Botón de envío y retroceso al formulario anterior -->
+                    </form>
+                        
+                    <div class="text-center">
+                        <button class="btn btn-primary mt-3" onclick="mostrarFormularioAnterior()">Anterior</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Agrega el enlace a Bootstrap JS (jQuery es requerido) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal de la intranet */
+.intranet-container {
+    max-width: auto;
+    margin: 0 auto;
+}
+
+/* Encabezado (header) */
+header {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-color: #8DC5AB;
+    padding: 10px 30px;
+    color: #000000;
+    text-align: center;
+}
+
+/* Estilos para la nueva estructura hospital-info */
+header .hospital-info {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    max-height: 80px;
+    margin-right: 10px; /* Puedes ajustar este valor según sea necesario */
+}
+
+/* Estilos para hospital-text */
+.hospital-text {
+    display: flex;
+    flex-direction: column;
+}
+
+header h1.Titulo2 {
+    margin: 0;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+header h1.Titulo3 {
+    font-size: 15px;
+    text-decoration: underline;
+    margin-top: 0; /* Ajusta este valor según sea necesario */
+}
+
+
+/* Botón de menú */
+.menu-button {
+    background-color: #fff;
+    color: #333;
+    padding: 15px 30px;
+    border-color: black;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 19px;
+}
+
+/* Contenido principal (main) */
+main {
+    margin-top: 50px;
+}
+
+/* Sección de documentos */
+.document-section,
+.message-section {
+    margin-bottom: 30px;
+}
+
+.document-section h2,
+.message-section h2 {
+    color: #333;
+}
+
+/* Añade estilos para el nuevo contenedor y los botones */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Cambié space-around por center */
+    margin-top: 20px;
+}
+
+.ButtonIntra {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border-color: black;
+    border-radius: 4px;
+    padding: 10px 20px;
+    width: 400px; /* Ajusta el ancho según sea necesario */
+    text-align: left; /* Cambié a left para alinear el texto a la izquierda */
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Estilos adicionales para separar los botones en dos filas */
+.ButtonIntra:nth-child(n+4) {
+    margin-top: 10px; /* Espacio entre las filas */
+}
+
+.ButtonIntra img {
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+    width: 100px;
+}
+
+footer {
+    background-color: #8DC5AB;
+    padding: 67px;
+    color: #393939;
+    text-align: center;
+    margin-top: 61px;
+}

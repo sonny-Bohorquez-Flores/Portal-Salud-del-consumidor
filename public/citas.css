@@ -1,0 +1,152 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ACA7A7;
+}
+
+/* Contenedor principal de la intranet */
+.intranet-container {
+    max-width: auto;
+    margin: 0 auto;
+}
+
+/* Encabezado (header) */
+header {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-color: #8DC5AB;
+    padding: 10px 30px;
+    color: #000000;
+    text-align: center;
+}
+
+/* Estilos para la nueva estructura hospital-info */
+header .hospital-info {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    max-height: 80px;
+    margin-right: 10px; /* Puedes ajustar este valor según sea necesario */
+}
+
+/* Estilos para hospital-text */
+.hospital-text {
+    display: flex;
+    flex-direction: column;
+}
+
+header h1.Titulo2 {
+    margin: 0;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+header h1.Titulo3 {
+    font-size: 15px;
+    text-decoration: underline;
+    margin-top: 0; /* Ajusta este valor según sea necesario */
+}
+
+
+/* Botón de menú */
+.menu-button {
+    background-color: #fff;
+    color: #333;
+    padding: 15px 30px;
+    border-color: black;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 19px;
+}
+
+/* Contenido principal (main) */
+main {
+    margin: 20px 20px;
+    background-color: white;
+}
+
+footer {
+    background-color: #8DC5AB;
+    padding: 58px;
+    color: #393939;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+/* Agrega estilos para el contenedor del título */
+.titulo-container {
+    text-align: center;
+    margin: 20px 0px;
+    margin-left: 100px; /* Ajusta el margen según sea necesario */
+    padding: 10px;
+    margin-right:90px ;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    
+}
+.blanco{
+    border-radius: 10px;
+    color: white;
+}
+.blanco2{
+    border-radius: 10px;
+    margin: 20px;
+    margin-top: 90px;
+    color: white;
+}
+
+/* Estilos para el título */
+.titulo {
+    margin: 0;
+    color: #333; /* Color del texto, ajusta según sea necesario */
+}
+
+/* Estilos para el subtitulo y el texto */
+.info-container {
+    margin: 60px ; /* Ajusta el margen según sea necesario */
+}
+
+.subtitulo {
+    margin-left: 100px;
+    color: #333; /* Color del texto, ajusta según sea necesario */
+}
+
+.descripcion {
+    margin-top: 10px; /* Ajusta el margen superior según sea necesario */
+    margin-left: 100px;
+    color: #777777; /* Color del texto, ajusta según sea necesario */
+}
+
+/* Estilos para la tabla */
+table {
+    width: 95%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+    margin-left: 30px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Estilos para el botón "Ingresar" en la columna "Historia Clínica" */
+.ingresar-button {
+    border-radius: 8px; /* Borde redondeado */
+    background-color: #ff6666; /* Color rojo, ajusta según sea necesario */
+    color: #fff; /* Texto blanco */
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}

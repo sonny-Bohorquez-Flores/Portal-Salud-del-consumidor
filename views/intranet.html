@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTRANET</title>
+    <link rel="stylesheet" href="/public/intranet.css">
+</head>
+
+<body>
+    <div class="intranet-container">
+        <header>
+            <div class="hospital-info">
+                <img src="/Img/hospital.png" alt="logo Hospital">
+                <div class="hospital-text">
+                    <h1 class="Titulo2">Hospital Gosling</h1>
+                    <h1 class="Titulo3">ciudad y esperanza</h1>
+                </div>
+            </div>
+            <a class="menu-button" href="/views/login.html" >Cerrar Sección</a>
+        </header>
+        <main>
+            <div class="button-container">
+                <button id="btnUsuario" class="ButtonIntra">
+                    <img src="/Img/usuario.png" alt="imagenespng"> USUARIO
+                </button>
+            
+                <button id="btnInformesMedicos" class="ButtonIntra">
+                    <img src="/Img/archivo.png" alt="imagenespng"> INFORMES MÉDICOS
+                </button>
+            
+                <button id="btnGestionarCitas" class="ButtonIntra">
+                    <img src="/Img/citas.png" alt="imagenespng"> GESTIONAR CITAS
+                </button>
+            
+                <button id="btnPacientes" class="ButtonIntra">
+                    <img src="/Img/8386016.png" alt="imagenespng"> DOCTORES
+                </button>
+            
+                <button id="btnAsistencia" class="ButtonIntra">
+                    <img src="/Img/registro.png" alt="imagenespng"> ASISTENCIA
+                </button>
+            
+                <button id="btnCorreo" class="ButtonIntra">
+                    <img src="/Img/correo.png" alt="imagenespng"> CORREO
+                </button>
+            </div>
+            
+        </main><!-- Coloca esto al final de tu HTML o en un archivo JavaScript -->
+        <script>
+            // Función para abrir una nueva ventana con la URL correspondiente
+            function openWindow(url) {
+                window.open(url, "_blank");
+            }
+        
+            // Asigna un controlador de clic a cada botón
+            document.getElementById("btnUsuario").addEventListener("click", function () {
+                openWindow("url_usuario");
+            });
+        
+            document.getElementById("btnInformesMedicos").addEventListener("click", function () {
+                openWindow("url_informes_medicos");
+            });
+        
+            document.getElementById("btnGestionarCitas").addEventListener("click", function () {
+                openWindow("/views/citas.html");
+            });
+        
+            document.getElementById("btnPacientes").addEventListener("click", function () {
+                openWindow("/views/doctores.html");
+            });
+        
+            document.getElementById("btnAsistencia").addEventListener("click", function () {
+                openWindow("url_asistencia");
+            });
+        
+            document.getElementById("btnCorreo").addEventListener("click", function () {
+                openWindow("url_correo");
+            });
+        </script>
+        
+        <footer>
+            Copyright © Hospital Gosling
+        </footer>
+    </div>
+</body>
+
+</html>
